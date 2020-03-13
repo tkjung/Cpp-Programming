@@ -1,0 +1,7 @@
+6
+apple 0
+banana 0
+walk    1
+do      1
+red     2
+blue    2
