@@ -1,0 +1,23 @@
+인사 데이터를 정리하기 위해서 다음과 같은 구조체를 사용하기로 하였다.
+struct person{
+    char id[15];  // 주민번호
+    char *name;   // 이름. 길이는 최대 200바이트.
+};
+
+이러한 데이터를 표준입력에서 읽어서 저장하기 위한 함수 getPerson을 작성하라.
+프로토타입은
+struct person * getPerson();
+이며 데이터가 없을 시에는 0을 반환하고 있으면 메모리를 할당하여 내용을 저장하고
+포인터를 반환한다.
+아래와 같이 테스트한다.
+
+struct person * employee[100];
+int count;
+struct person * t;
+for ( count=0; t=getPerson(); count++){
+    employee[count] = t;
+}
+
+printAll(employee, count);  // 이 출력 함수는 만들어야 한다.
+
+removeAll(employee, count);  //  동적할당한 모든 메모리를 반환. 주의해야할 점이 있다.
