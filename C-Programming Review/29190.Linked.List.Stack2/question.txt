@@ -1,0 +1,12 @@
+* 전역 변수를 사용하던 스택 문제를 수정하는 문제입니다.
+
+스택의 시작 포인터를 main함수의 지역변수로 바꾸고 이를
+함수 insert 등의 파라메터로 전달한다. (주소변수의 주소를 전달)
+변경하는 함수는 &pStack을 전달해야하고 top 같은 함수는 그냥 pStack만 전달해도 됩니다.
+
+int main(){
+   struct item * pStack = 0;
+   // 삽입할 때는 insert(n); 이 아니라 insert(&pStack, n); 이 되고,
+    // pop 할때도 pop(&pStack);
+    // 다른 함수는 변경을 하지 않기 때문에
+    // top(pStack);  is_empty(pStack); 처럼 호출하면 됩니다.
