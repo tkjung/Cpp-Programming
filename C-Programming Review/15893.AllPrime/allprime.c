@@ -1,3 +1,5 @@
+// N이하의 모든 소수 출력하기
+
 #include <stdio.h>
 
 int isPrime(int N)
