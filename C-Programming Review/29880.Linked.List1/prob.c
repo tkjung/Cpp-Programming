@@ -5,8 +5,8 @@ struct item {
     int score;
     struct item * next;
 } ;
-void init(struct item **);
-void printall(struct item *);
+void init(struct item **);    // 구현해야 함.
+void printall(struct item *); // 구현해야 함.
 
 
 int main(){
